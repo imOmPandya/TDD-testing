@@ -55,7 +55,21 @@ function executeCommands(initialPosition, initialDirection, commands) {
         } else if (direction === 'W') {
           direction = 'N';
         }
-      } 
+      } else if (command === 'u') {
+        // Turn up based on the current direction
+        if (direction === 'N') {
+          direction = 'U';
+        } else if (direction === 'S') {
+          direction = 'D';
+        }
+      } else if (command === 'd') {
+        // Turn down based on the current direction
+        if (direction === 'N') {
+          direction = 'D';
+        } else if (direction === 'S') {
+          direction = 'U';
+        }
+      }
 
       
 

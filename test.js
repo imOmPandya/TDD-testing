@@ -46,5 +46,27 @@ describe('Chandrayaan 3 Lunar Craft', () => {
     expect(finalState.position).toEqual([0, 0, 0]);
     expect(finalState.direction).toBe('E');
   });
+
+  test('should turn the spacecraft up', () => {
+    const initialPosition = [0, 0, 0];
+    const initialDirection = 'N';
+    const commands = ['u'];
+
+    const finalState = executeCommands(initialPosition, initialDirection, commands);
+
+    expect(finalState.position).toEqual([0, 0, 0]);
+    expect(finalState.direction).toBe('U');
+  });
+
+  test('should turn the spacecraft down', () => {
+    const initialPosition = [0, 0, 0];
+    const initialDirection = 'N';
+    const commands = ['d'];
+
+    const finalState = executeCommands(initialPosition, initialDirection, commands);
+
+    expect(finalState.position).toEqual([0, 0, 0]);
+    expect(finalState.direction).toBe('D');
+  });
   
 });
