@@ -33,11 +33,35 @@ function executeCommands(initialPosition, initialDirection, commands) {
         } else if (direction === 'D') {
           position[2]++;
         }
+      }  else if (command === 'l') {
+        // Turn left based on the current direction
+        if (direction === 'N') {
+          direction = 'W';
+        } else if (direction === 'S') {
+          direction = 'E';
+        } else if (direction === 'E') {
+          direction = 'N';
+        } else if (direction === 'W') {
+          direction = 'S';
+        }
+      } else if (command === 'r') {
+        // Turn right based on the current direction
+        if (direction === 'N') {
+          direction = 'E';
+        } else if (direction === 'S') {
+          direction = 'W';
+        } else if (direction === 'E') {
+          direction = 'S';
+        } else if (direction === 'W') {
+          direction = 'N';
+        }
       } 
+
+      
+
     }
   
     return { position, direction };
   }
   
   module.exports = { executeCommands };
-  
