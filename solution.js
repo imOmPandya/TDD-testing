@@ -6,34 +6,34 @@ function executeCommands(initialPosition, initialDirection, commands) {
       if (command === 'f') {
         // Move forward based on the current direction
         if (direction === 'N') {
-          position[1]++; // Move in the positive y direction
+          position[1]++;
         } else if (direction === 'S') {
-          position[1]--; // Move in the negative y direction
+          position[1]--;
         } else if (direction === 'E') {
-          position[0]++; // Move in the positive x direction
+          position[0]++;
         } else if (direction === 'W') {
-          position[0]--; // Move in the negative x direction
+          position[0]--;
         } else if (direction === 'U') {
-          position[2]++; // Move in the positive z direction
+          position[2]++;
         } else if (direction === 'D') {
-          position[2]--; // Move in the negative z direction
+          position[2]--;
         }
       } else if (command === 'b') {
         // Move backward based on the current direction
         if (direction === 'N') {
-          position[1]--; // Move in the negative y direction
+          position[1]--;
         } else if (direction === 'S') {
-          position[1]++; // Move in the positive y direction
+          position[1]++;
         } else if (direction === 'E') {
-          position[0]--; // Move in the negative x direction
+          position[0]--;
         } else if (direction === 'W') {
-          position[0]++; // Move in the positive x direction
+          position[0]++;
         } else if (direction === 'U') {
-          position[2]--; // Move in the negative z direction
+          position[2]--;
         } else if (direction === 'D') {
-          position[2]++; // Move in the positive z direction
+          position[2]++;
         }
-      }
+      } 
     }
   
     return { position, direction };
