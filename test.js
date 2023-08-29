@@ -1,5 +1,5 @@
 const { executeCommands } = require('./solution'); 
-const { describe, test, expect } = require('jest');
+
 
 describe('Chandrayaan 3 Lunar Craft', () => {
   test('should move the spacecraft forward', () => {
